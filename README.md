@@ -68,6 +68,22 @@ recently the system EQ defaulting on — `40 4x 20` is documented as `01 ON` and
 it to zero, which cost `roland_sc88_y03` 4.58 dB of bass. Everything that belongs upstream should go
 upstream; this fork is for what does not.
 
+### Which direction step 2 actually protects
+
+It would be easy to read that regression test as protecting this fork's freedom to diverge. It
+matters more in the other direction.
+
+Upstream's corpus is full of files people have specific attachments to — `canyon.mid` among them,
+which is in there at four tone maps and in two container formats. The oracle, the ratchet, and the
+per-song tolerance table where every widened bound has to carry a written reason all exist so that
+those keep sounding the way they did. Someone who just wants `canyon.mid` to sound like it did when
+they were thirteen has a claim on this engine that an obscure karaoke corpus does not get to
+override.
+
+Step 2 is what guarantees it cannot. Nothing from here reaches upstream until it is shown to leave
+every one of those files alone — and if it cannot, it stays in this repository, which is what this
+repository is for.
+
 ## What that means for you
 
 Probably that this repository is not useful to you. Changes made for a single, unusual corpus can
